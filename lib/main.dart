@@ -42,11 +42,6 @@ class _HomeWidgetState extends State<HomeWidget> {
     final authPlugin = AmplifyAuthCognito();
     await Amplify.addPlugin(authPlugin);
 
-    // You can use addPlugins if you are going to be adding multiple plugins
-    // await Amplify.addPlugins([authPlugin, analyticsPlugin]);
-
-    // Once Plugins are added, configure Amplify
-    // Note: Amplify can only be configured once.
     try {
       await Amplify.configure(amplifyconfig);
     } on AmplifyAlreadyConfiguredException {
